@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="Thistle">
+    <table cellspacing="10">
+      <tr  height="30px" width="800px" bgcolor="Orchid  "><td width="800px" height="75px"><img src="kbalogo.png" alt="logo" height="50"></td>
+       <td width="800px" height="75px" align="center"><a href="home.html"><font color="DarkSlateBlue " size="5">Home |</font></a>&nbsp&nbsp&nbsp&nbsp
+        
+        <a href="Addcourse.html">
+            <font color="DarkSlateBlue " size="5">Courses |</font>
+        </a>&nbsp &nbsp&nbsp&nbsp
+        <a href="Addcourse.html">
+            <font color="DarkSlateBlue " size="5">Add Courses |</font>
+        </a>&nbsp &nbsp&nbsp&nbsp
+        <a href="contact.html"><font color="DarkSlateBlue " size="5">Contact Us |</font></a>&nbsp&nbsp&nbsp&nbsp
+        <a href=""><font color="DarkSlateBlue " size="5">Logout |</font></a></td></tr>
+
+    </table>
+ 
+
+
+    <center>
+    <form >
+    <h1>ADD COURSE</h1>
+    
+    <table cellspacing="40" bgcolor="LightCoral" >
+       <tr>
+         <td>Course Name:</td>
+        <td><input type="text" placeholder="Enter course name" required ></td>
+       </tr>
+        <tr>
+            <td>Course Id:</td>
+            <td><input type="text" placeholder="Enter course id" required></td>
+        </tr>
+    <tr>
+        <td>Course type:</td>
+        <td>  
+        <select name="coursetype" id="">
+        <option  value="Course1" selected>Course1</option>
+        <option value="Course2"  >Course2</option>
+        <option value="Course3" >Course3</option>
+        <option value="Course4" >Course4</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td><textarea name="description" id="" rows="8" cols="20" required placeholder="Enter description" ></textarea></td>
+    </tr>
+    <tr>
+        <td>Price:</td>
+        <td>
+            <Select>
+            <option value="1000" selected>1000</option>
+            <option value="2000">2000</option>
+            <option value="3000">3000</option>
+            <option value="4000">4000</option>
+            </Select>
+        </td>
+    </tr>
+    <!-- <tr>
+        <td>Education:</td>
+        <td>
+        <input type="checkbox" value="UG">UG
+        <input type="checkbox"value="PG">PG
+        </td>
+    </tr> -->
+    <!-- <tr>
+        <td>Gender:</td>
+        <td>
+            Male<input type="radio" value="male" name="gender">
+            Female<input type="radio" value="female" name="gender"> 
+            Others<input type="radio" value="others" name="gender">
+         </td>
+    </tr>
+    <tr><td>Email:</td>
+    <td><input type="email" placeholder="Enter a valid email" required></td></tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" placeholder="Enter password"></td>
+    </tr>
+    </table>
+    -->
+    <tr>
+        <td>
+            <input type="submit" value="Add course">
+            <input type="reset" value="Reset">
+         </td>
+    </tr>
+    </form>
+
+</center>   
+</body>
+</html>
