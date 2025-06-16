@@ -1,0 +1,38 @@
+.signup{
+    background-color: rgb(231, 216, 226);
+}
+.signup h1{
+    font-size:xx-large;
+    color: #da17c9;
+    align-content: center;
+}
+.login{
+     background-color: antiquewhite;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+.addcourse{
+    background-color: #f1eaf1;
+}
+.navigation ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+   
+    
+}
+.navigation li{
+         
+         padding: 10px;
+        font-size: larger;
+        text-shadow: 10px;
+        
+
+}
+.navigation a{
+    
+    text-decoration: none;
+}
