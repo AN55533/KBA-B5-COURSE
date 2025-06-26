@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const l = "Kanyakumari";
+
+        // document.write(l[3]);
+        const element = document.write(l[5] + l[6] + l[7] + l[8] + l[9] + l[10]);
+        let m = "I like ice cream and i like to sleep";
+
+        document.write("<br> Length of the string", m.length);
+        document.write("<br> Length of the string", m.substring(6,15));
+        document.write("<br> Length of the string", m.slice(6, 15));
+        document.write(`<br> character at position 2 is ${m.charAt(2)}`);
+        document.write(`<br> character at position 2 is ${m.slice(19)}`);
+        document.write("<br> My String in upper case",m.toUpperCase())
+        document.write("<br> My String in upper case", m.toLowerCase())
+        m.search()
+        document.write("<br> Ice cream stats at",m.search(/icecream/g))
+        document.write("<br>  Replace icecream to burger",m.replace(/icecream/g,"burger"))
+        let url="www.kba.ai";
+        let u=url.split('.');
+        document.write("<br> without dot",u)
+    </script>
+</body>
+
+</html>
