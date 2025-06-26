@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+        <div class="bg-purple-300 flex flex-row h-[100px] ">
+            <nav class="flex ">
+                <ul class="flex flex-row gap-15 p-10 text-purple-800 text-[20px] ">
+                    <li class="flex"><img src="images/kbalogo.png" alt="kbaimg" class="h-[60px] ml-[10px] mt-[-10px]"></li>
+                    <li class="ml-[500px]"><a href="Home.html">HOME</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li><a href="addcourse.html">ADD COURSE</a></li>
+                    <li><a href="Home.html">LOGOUT</a></li>
+                </ul>
+            </nav>
+        
+        </div>
+    
+        <form action="">
+            <div class="h-[750px] w-[650px]  bg-gray-300 ml-[400px]">
+                <h1 class="mt-[30px] text-2xl ml-[170px] p-5 text-purple-400">UPDATE COURSE</h1>
+                <P class="text-[20px] p-8 text-purple-900">COURSE NAME</P>
+                <input type="text" required placeholder="Enter your name"
+                    class="outline-2 ml-[30px] border border-stone mt-[-80px] w-[450px]">
+                <P class="text-[20px] p-8 text-purple-900">COURSE ID</P>
+                <input type="text" required placeholder="Enter your id"
+                    class="outline-2 ml-[30px] border border-stone mt-[-80px] w-[450px]">
+                <P class="text-[20px] p-8 text-purple-900">COURSE TYPE</P>
+                <select name="" id="" class="outline-2 ml-[30px] border border-stone mt-[-80px] w-[450px]">
+                    <option value="Online">ONLINE</option>
+                    <option value="Ofline">OFFLINE</option>
+                </select>
+        
+                <P class="text-[20px] p-8 text-purple-900">DESCRIPTION</P>
+                <textarea name="" id="" class="outline-2 ml-[30px] border border-stone mt-[-80px] w-[450px]"></textarea>
+                <P class="text-[20px] p-8 text-purple-900">PRICE</P>
+                <select name="" id="" class="outline-2 ml-[30px] border  border-blue-500 mt-[-80px] w-[450px]">
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                    <option value="4000">4000</option>
+                    <option value="5000">5000</option>
+                </select>
+                <p> <input type="submit" value="UPDATE COURSE"
+                        class="w-[450px] h-[40px] bg-purple-500 ml-[40px] mt-[20px] rounded-lg "></p>
+        
+            </div>
+        </form>
+</body>
+</html>
