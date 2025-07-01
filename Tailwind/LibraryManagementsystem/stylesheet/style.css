@@ -1,0 +1,27 @@
+.adddiv1{
+    height: 80px;
+        width: 100%;
+        background-color: #34495e;
+        padding: 10px;
+}
+.adddiv1 ul{
+    float: left;
+        display: flex;
+        padding: 10px;
+}
+.adddivtab1{
+
+   width: 500px;
+    height: 500px; 
+     justify-content: center; 
+     margin-left: 500px;
+    border: 5px solid;
+     border-color: aqua;
+}
+.adddiv1li{
+        display: flex;
+        padding: 5px;
+        margin-left: 600px;
+        font-size: 24px;
+        color: aqua;
+}

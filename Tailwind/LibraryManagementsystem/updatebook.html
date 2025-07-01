@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-500">
+
+    <div class="w-full  h-[100px] bg-gray-400">
+        <nav>
+            <ul class="flex flex-row p-3 ">
+                <li><img src="librarymanagementsystem.jpg" alt="" class="w-[90px]  ml-2 w-20 h-20"></li>
+                <li class="p-5 text-[30px] font-bold ">LIBRARY</li>
+                <a href="Home.html">
+                    <li class="p-5 text-[25px] ml-150 text-pink-800  hover:text-blue-800">Home</li>
+                </a>
+                <a href="Login.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">Login</li>
+
+                </a>
+                <a href="Addbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800">Add Book</li>
+                </a>
+                <a href="Viewbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">View Book</li>
+                </a>
+            </ul>
+        </nav>
+
+
+    </div>
+
+    <form action="">
+        <div class="text-center w-200 h-130 bg-white ml-90 mt-10 ">
+            <h1 class="text-center text-[35px] bg-blue-300 text-pink-800">UPDATE BOOK</h1>
+
+            <p class="text-[25px]  text-pink-800 p-5">Title:
+                <input type="text" placeholder="" required
+                    class="  w-[400px]  h-7 border-1 border-solid  text-[15px]">
+            </p>
+            <p class="text-[25px]  text-pink-800 p-2 ml-[-35px]">Authour:
+                <input type="text" placeholder="" required
+                    class="  w-[400px]  h-7 border-1 border-solid  text-[15px] ">
+            </p>
+
+            <p class="text-[25px]  text-pink-800 p-2 ml-[-15px]">Genre:
+                <input type="text" placeholder="" required
+                    class="  w-[400px]  h-7 border-1 border-solid  text-[15px] ">
+            </p>
+            <p>
+                <input type="file" class="">
+            </p>
+            <p class="text-[25px]  text-pink-800 p-2 ml-[-70px]">Description:
+                <textarea placeholder="" required
+                    class="  w-[400px]  h-7 border-1 border-solid  text-[15px] rows-20 cols-30"></textarea>
+            </p>
+            <p> <input type="submit" value="Update Book" class="w-[350px] h-[35px] bg-pink-900 rounded-lg ml-20">
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

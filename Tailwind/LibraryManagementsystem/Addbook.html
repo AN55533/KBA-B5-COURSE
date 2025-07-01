@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body  class="bg-gray-500">
+ 
+<div class="w-full  h-[100px] bg-gray-400">
+    <nav>
+        <ul class="flex flex-row p-3 ">
+            <li><img src="librarymanagementsystem.jpg" alt="" class="w-[90px]  ml-2 w-20 h-20"></li>
+            <li class="p-5 text-[30px] font-bold ">LIBRARY</li>
+            <a href="Home.html">
+                <li class="p-5 text-[25px] ml-150 text-pink-800  hover:text-blue-800">Home</li>
+            </a>
+            <a href="Login.html">
+                <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">Login</li>
+
+            </a>
+            <a href="Addbook.html">
+                <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800">Add Book</li>
+            </a>
+            <a href="Viewbook.html">
+                <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">View Book</li>
+            </a>
+        </ul>
+    </nav>
+
+
+</div>
+
+<form action="">
+<div class="text-center w-200 h-100 bg-white ml-90 mt-10 ">
+    <h1  class="text-center text-[35px] bg-blue-300 text-pink-800">ADD BOOK</h1>
+
+    <p class="text-[20px]  text-pink-800 p-5 mt-10">Title:
+    <input type="text" placeholder="Enter Book name" required  class="  w-[400px]  h-7 border-1 border-solid border-pink-300  text-[15px] text-pink-200">
+    </p>
+    <p class="text-[20px]  text-pink-800 p-2 ml-[-35px]">Authour:
+        <input type="text" placeholder="Enter Authour Name" required class="  w-[400px]  h-7 border-1 border-solid border-pink-300  text-[15px] text-pink-200">
+    </p>
+
+        <p class="text-[20px]  text-pink-800 p-2 ml-[-15px]">Genre:
+            <input type="text" placeholder="Enter Authour Name" required
+                class="  w-[400px]  h-7 border-1 border-solid  border-pink-300  text-[15px] text-pink-200 ">
+        </p>
+        <p>
+            <input type="file" class="">
+        </p>
+        <p class="text-[20px]  text-pink-800 p-2 ml-[-70px]">Description:
+            <textarea  placeholder="Enter Description" required class="  w-[400px]  h-7 border-1 border-solid  border-pink-300  text-[15px] text-pink-200"></textarea>
+        </p>
+                    <p> <input type="submit" value="Add Book"
+                             class="w-[350px] h-[35px] bg-pink-900 rounded-lg ml-20">
+                    </p>
+</div>
+</form>
+    <!-- <table >
+        <tr>
+            <td>
+                <form>
+                   
+                        <table style="height: 400px;">
+                            <tr>
+                                <td >Title:</td>
+                                <td><input type="text" placeholder="Enter Book name" required ></td>
+                            </tr>
+                            <tr>
+                                <td >Authour:</td>
+                                <td><input type="text" placeholder="Enter Authour Name" required></td>
+    
+                            </tr>
+    
+                            <tr>
+                                <td >Genere:</td>
+                                <td><input type="text" placeholder="Enter Genere" required></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="file"><br></td>
+                            </tr>
+                            <tr>
+                                <td >Description:</td>
+                                <td><textarea name="" placeholder="Enter Description" id="" rows="10" cols="30"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+            <p> <input type="submit" value="Add Book"
+                    style="width: 350px;height: 35px;margin-left: 20px;background-color: rgb(153, 19, 153);border-radius: 25px;">
+            </p>
+               
+            </form>
+            </td>
+        </tr>
+    </table> -->
+
+    
+</body>
+</html>

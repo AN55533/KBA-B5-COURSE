@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-500">
+    <div class="w-full  h-[100px] bg-gray-400">
+        <nav>
+            <ul class="flex flex-row p-3 ">
+                <li><img src="librarymanagementsystem.jpg" alt="" class="w-[90px]  ml-2 w-20 h-20"></li>
+                <li class="p-5 text-[30px] font-bold ">LIBRARY</li>
+                <a href="Home.html">
+                    <li class="p-5 text-[25px] ml-150 text-pink-800  hover:text-blue-800">Home</li>
+                </a>
+                <a href="Login.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">Login</li>
+
+                </a>
+                <a href="Addbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800">Add Book</li>
+                </a>
+                <a href="Viewbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">View Book</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <form action="">
+        <div class=" w-[500px] h-[500px] bg-white ml-130 mt-10">
+            <h1 class="text-center text-[40px] bg-gray-300 text-pink-500">Signup</h1>
+            <p class="text-[20px] text-pink-800 ml-10 mt-5">Username:</p>
+            <p><input type="text" name="" id="" required placeholder="Enter your user name"
+                    class=" text-[15px] text-pink-200 w-100 border-1  ml-10 h-8"></p>
+                    <p class="text-[20px] text-pink-800 ml-10 mt-5">Email:</p>
+                    <p><input type="text" name="" id="" required placeholder="Enter your Email"
+                            class=" text-[15px] text-pink-200 w-100 border-1  ml-10 h-8"></p>
+            <p class="text-[20px] text-pink-800 mt-5 ml-10">Password:</p>
+            <p><input type="password" name="" id="" required placeholder="Enter Your Password"
+                    class="  text-[15px] text-pink-200 w-100 border-1  ml-10 h-8"></p>
+            <p class="text-[20px] text-pink-800 ml-10 mt-5">Role:</p>
+
+                <p><select name="" id=""  class=" text-[15px] text-pink-200 w-100 border-1  ml-10 h-8">
+                    <option value="">User</option>
+                    <option value="">Admin</option>
+                </select></p>
+            
+            <p class="text-pink-800 mt-5 ml-10">Already have an account? <a href="Login.html"
+                    class="text-blue-800">Login </a></p>
+            <a href="Home.html">
+                <input type="submit" value="Signup" class="bg-pink-900 w-60 ml-30 p-2 rounded-lg mt-5"></a>
+        </div>
+    </form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+</head>
+<body >
+<body class="bg-gray-500">
+
+    <div class="w-full  h-[100px] bg-gray-400">
+        <nav>
+            <ul class="flex flex-row p-3 ">
+                <li><img src="librarymanagementsystem.jpg" alt="" class="w-[90px]  ml-2 w-20 h-20"></li>
+                <li class="p-5 text-[30px] font-bold ">LIBRARY</li>
+                <a href="Home.html">
+                    <li class="p-5 text-[25px] ml-150 text-pink-800  hover:text-blue-800">Home</li>
+                </a>
+                <a href="Login.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">Login</li>
+
+                </a>
+                <a href="Addbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800">Add Book</li>
+                </a>
+                <a href="Viewbook.html">
+                    <li class="p-5 text-[25px] text-pink-800 hover:text-blue-800 ">View Book</li>
+                </a>
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+<div class="w-150 h-150 bg-white ml-130 mt-10">
+    <form>
+    <h1 class="text-center text-[40px] text-pink-800 bg-gray-300 ">SIGNUP</h1>
+
+<table class="ml-15" >
+    <tr>
+        <td class="text-pink-800 text-xl ">
+             Username:
+        </td>
+    </tr>
+    <tr >
+        <td class="p-2"><input type="text" placeholder="Enter Username" required class="border-1 w-100 h-8 border-gray-300 text-gray-300" ></td>
+    </tr>
+    <tr>
+        <td class="text-pink-800 text-xl ">
+            Email:
+        </td>
+    </tr>
+    <tr>
+        <td class="p-2"><input type="email" required placeholder="Enter Email" required class="border-1 w-100 h-8" ></td>
+    </tr>
+    <tr>
+        <td class="text-pink-800 text-xl">
+            Password:
+        </td>
+    </tr>
+    <tr class="p-3">
+        <td ><input type="password" placeholder="Enter Password" class="border-1 w-100 h-8 ml-2"></td>
+    </tr>
+<tr>
+    <td class="text-pink-800 text-xl">
+        Role:
+    </td>
+</tr>
+    <tr>
+        <td class="p-2">
+       <select name="" id="" class="border-1 w-100 h-8 ">
+        <option value="">User</option>
+        <option value="">Admin</option>
+       </select>
+      </td>
+    </tr>
+
+
+    <tr>
+        <td style="font-size: 20px;">Already have an account?<a href="Login.html" style="font-size: 26px;margin-left: 70px;color: blue;text-decoration: none;">Login</a></td>
+
+    </tr>
+    <tr>
+        <td  ><input type="submit" value="Sign Up" style="width: 130px; margin-left: 150px;height: 40px; border-radius: 10px;background-color: blueviolet;">
+        </td>
+    </tr>
+</table>
+</form>
+    </div>
+    
+  
+</body>
+</html> -->
