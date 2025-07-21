@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Book Lending Manager</h1>
+
+<h2>Add New Book</h2>
+<label for="">Book Title</label>
+<input type="text" id="title" placeholder="Book Title">
+<label for="">Author</label>
+<input type="text" id="author" placeholder="Author">
+<button onclick="addbook()">Add Book</button>
+
+<h2>Available Books</h2>
+<ul id="bookList" ></ul>
+
+<h2>Issued Books</h2>
+<ul id="issuedList" ></ul>
+
+<script>
+        const books = [];
+        const issuedBooks = [];
+         
+        function addbook() {
+                const title = document.getElementById('title').value.trim();
+                const author = document.getElementById('author').value.trim();
+
+                books.push({ title, author });
+                document.getElementById('title').value = '';
+                document.getElementById('author').value = '';
+                renderBooks();
+            }
+
+            function issueBook(index) {
+                    const user = prompt("Enter the name of the user:");
+                    if (user) {
+                        issuedBooks.push({ ...books[index], user });
+                        books.splice(index, 1);
+                        renderBooks();
+                        renderIssuedBooks();
+                    }
+                }
+
+    function renderBooks() {
+        const list = document.getElementById('bookList');
+            list.innerHTML = '';
+                books.forEach((book, index) => {
+                list.innerHTML += `
+          <li>
+            Book:${book.title} Author: ${book.author}
+            <button onclick="issueBook(${index})">Issue</button>
+            <button onclick="deleteBook(${index})">Delete</button>
+          </li>`;
+                        });
+                    }
+
+
+    function renderIssuedBooks() {
+        const list = document.getElementById('issuedList');
+        list.innerHTML = '';
+        issuedBooks.forEach((book, index) => {
+            list.innerHTML += `
+          <li>
+            book: ${book.title} author: ${book.author} - Issued to: ${book.user}
+            <button onclick="returnBook(${index})">Return</button>
+          </li>`;
+        });
+    }
+       function returnBook(index) {
+        books.push({ title: issuedBooks[index].title, author: issuedBooks[index].author });
+        issuedBooks.splice(index, 1);
+        renderBooks();
+        renderIssuedBooks();   
+    }
+
+    function deleteBook(index) { 
+            books.splice(index, 1);
+            renderBooks(); 
+    }
+
+    
+</script>
+</body>
+</html>
+<!-- Book Lending Manager
+Build a Book Lending Manager using HTML and JavaScript that allows users to manage a simple book lending system. Users
+can add books, issue them to users, return them, and view the list of issued books.
+JavaScript Functionality:
+Add books with title and author
+Issue books to users
+View issued books list
+Return Books
+Delete Books -->
