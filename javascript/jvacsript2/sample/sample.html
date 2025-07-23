@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="expencedata">
+    <h1>expence manager</h1>
+    <label for="" id="monthdata">Month</label>
+    <select name="" id="month">
+        <option value="">jan</option>
+        <option value="">feb</option>
+        <option value="">mar</option>
+        <option value="">apr</option>
+        <option value="">may</option>
+        <option value="">jun</option>
+        <option value="">july</option>
+        <option value="">aug</option>
+        <option value="">sep</option>
+        <option value="">oct</option>
+        <option value="">nov</option>
+        <option value="">dec</option>
+    </select>
+  <label for="Hospital">Hospital fee</label>
+  <input type="number" id="Hospital">
+<label for="Rent">Rent fee</label>
+<input type="number" id="Rent">
+<label for="school">School fee</label>
+<input type="number" id="school">
+<button onclick="addexpence()">Add expence</button>
+<h1>Show Expence details</h1>
+<select name="" id="viewmonth" onchange="showexpence()">
+<option value="">select month</option>
+</select>
+<div id="details"></div>
+
+    </form>
+    <script>
+        const expence = [];
+     function   addexpence(){
+
+        const month1=document.getElementById('month').value
+        const hospitalfee = document.getElementById('Hospital').value
+        const rentfee = document.getElementById('Rent').value
+        const schoolfee = document.getElementById('school').value
+          expence[month]={
+            hospitalfee,
+            rentfee,
+            schoolfee,
+            total:hospitalfee + rentfee + schoolfee
+          }
+           const viewMonth = document.getElementById("viewMonth");
+         const option = document.createElement("option");
+         option.value = month;
+         option.textContent = month;
+         viewMonth.appendChild(option);
+        
+     }
+              
+     function showexpence(){
+            const { hospital, school, rent, total } = expense[selectedMonth];
+         detailsDiv.innerHTML = `
+        <p><strong>Month:</strong> ${selectedMonth}</p>
+        <p>Hospital Fee: ₹${hospital}</p>
+        <p>School Fee: ₹${school}</p>
+        <p>Rent Fee: ₹${rent}</p>
+        <p><strong>Total Expense: ₹${total}</strong></p>
+      `;
+
+     }
+    </script>
+</body>
+</html>

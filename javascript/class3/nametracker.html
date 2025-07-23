@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Expence Tracker</h2>
+    <p >Select month</p>
+<select id="rollSelect" onchange="showName()">
+    <option value="">-- Select month --</option>
+</select>
+<p id="ExpenceDisplay" style="font-weight: bold; font-size: 18px;"></p>
+
+    <script>
+                    const months = {
+                            jan: "Anju J V",
+                            feb: "Rahul M",
+                            mar: "Sneha K",
+                            apr: "Arjun R",
+                            may: "Meera S"
+                        };
+             
+            
+                const rollSelect = document.getElementById("rollSelect");
+                    for (const month in months) {
+                            const option = document.createElement("option");
+                            option.value = month;
+                            option.textContent = ` ${month}`;
+                            rollSelect.appendChild(option);
+                        }
+
+                        function showName() {
+                                const selectedRoll = rollSelect.value;
+                                if (selectedRoll) {
+                                    ExpenceDisplay.textContent = `Name: ${months[selectedRoll]}`;
+                                } else {
+                                    ExpenceDisplay.textContent = "";
+                                }
+                            }
+    </script>
+    
+</body>
+</html>

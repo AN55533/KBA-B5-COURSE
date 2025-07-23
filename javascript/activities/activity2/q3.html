@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>3.Create a dropdown for programming language classes offered on html page using javascript.</p>
+<div id="dropdownContainer"></div>
+
+<script>
+ 
+    const pgm = document.createElement("p");
+    pgm.textContent = "Programming Languages:";
+
+    const select = document.createElement("select");
+
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "-- Select a class --";
+    select.appendChild(defaultOption);
+
+    const option1 = document.createElement("option");
+    option1.textContent = "JAVASCRIPT";
+    option1.value = "JAVASCRIPT";
+    select.appendChild(option1);
+
+    const option2 = document.createElement("option");
+    option2.textContent = "PYTHON";
+    option2.value = "PYTHON";
+    select.appendChild(option2);
+
+    const option3 = document.createElement("option");
+    option3.textContent = "PHP";
+    option3.value = "PHP";
+    select.appendChild(option3);
+
+    const option4 = document.createElement("option");
+    option4.textContent = "HTML";
+    option4.value = "HTML";
+    select.appendChild(option4);
+
+    // Append label and dropdown to the container
+    const container = document.getElementById("dropdownContainer");
+    container.appendChild(pgm);
+    container.appendChild(select);
+</script>
+    
+</body>
+</html>

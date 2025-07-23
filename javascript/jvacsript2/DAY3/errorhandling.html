@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+<body>
+    <h1>trying the errorr handling,check browser handling</h1>
+    <script>
+        try{
+            // code that has chance of errors
+            let result=riskyOperation();
+        }catch(error){
+            console.log("An error occured",error.message);
+            //  catch the error here
+        }finally{
+            // executes regardless of error or not
+            console.log("This will always run")
+
+        }
+
+        function riskyOperation(){
+            let obj;
+            obj.property;//this is an error 
+        }
+    </script>
+
+    
+</body>
+</html>

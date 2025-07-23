@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>4.On the KBA-courses site you created add a radio button showing your experience on KBA(like good, bad, average).</p>
+ <div id="experience"></div>
+
+<script>
+    // Create a label
+    const label = document.createElement("p");
+    label.textContent = " Experience on KBA:";
+
+    const goodRadio = document.createElement("input");
+    goodRadio.type = "radio";
+    goodRadio.name = "experience";
+    goodRadio.value = "Good";
+    goodRadio.id = "good";
+    label.appendChild(goodRadio);
+    // const goodLabel = document.createElement("label");
+    // goodLabel.htmlFor = "good";
+    // goodLabel.textContent = "Good";
+
+    const avgRadio = document.createElement("input");
+    avgRadio.type = "radio";
+    avgRadio.name = "experience";
+    avgRadio.value = "Average";
+    avgRadio.id = "average";
+
+    // const avgLabel = document.createElement("label");
+    // avgLabel.htmlFor = "average";
+    // avgLabel.textContent = "Average";
+
+
+    const badRadio = document.createElement("input");
+    badRadio.type = "radio";
+    badRadio.name = "experience";
+    badRadio.value = "Bad";
+    badRadio.id = "bad";
+
+    // const badLabel = document.createElement("label");
+    // badLabel.htmlFor = "bad";
+    // badLabel.textContent = "Bad";
+
+    const container = document.getElementById("experience");
+    container.appendChild(label);
+    container.appendChild(goodRadio);
+    container.appendChild(goodLabel);
+    container.appendChild(document.createElement("br"));
+
+    container.appendChild(avgRadio);
+    container.appendChild(avgLabel);
+    container.appendChild(document.createElement("br"));
+
+    container.appendChild(badRadio);
+    container.appendChild(badLabel);
+</script>
+    
+</body>
+</html>

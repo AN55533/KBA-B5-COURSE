@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>5.Create a dropdown for list of cakes and print the value of second option.</p>
+    <p id="cake"></p>
+    <script>
+    const cakes=document.createElement("c");
+    cakes.textContent="favourite cakes: ";
+
+    const select=document.createElement("select");
+    
+    const option1=document.createElement("option");
+    option1.value="chocolate";
+    option1.textContent="chocolate cake";
+    select.appendChild(option1);
+
+     const option2 = document.createElement("option");
+        option2.value = "vanila";
+        option2.textContent = "vanila cake";
+        select.appendChild(option2);
+    
+    const cakelist=document.getElementById("cake");
+    cakelist.appendChild(cakes);
+    cakelist.appendChild(select);
+    
+      const secondvalue = select.options[1].value;
+    const result=document.createElement("p")
+    result.textContent="second option value is "+ secondvalue;
+    cakelist.appendChild(result);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roll Number Name Display</title>
+</head>
+
+<body>
+
+    <h2>Select a Roll Number to See the Name</h2>
+
+    <label for="rollSelect">Roll Number:</label>
+    <select id="rollSelect" onchange="showName()">
+        <option value="">-- Select Roll Number --</option>
+    </select>
+
+    <p id="nameDisplay" style="font-weight: bold; font-size: 18px;"></p>
+
+    <script>
+        // Roll number and name data
+        const students = {
+            101: "Anju J V",
+            102: "Rahul M",
+            103: "Sneha K",
+            104: "Arjun R",
+            105: "Meera S"
+        };
+
+        const rollSelect = document.getElementById("rollSelect");
+        const nameDisplay = document.getElementById("nameDisplay");
+
+        // Add roll numbers as options to the dropdown
+        for (const roll in students) {
+            const option = document.createElement("option");
+            option.value = roll;
+            option.textContent = `Roll No: ${roll}`;
+            rollSelect.appendChild(option);
+        }
+
+        // Show name based on selected roll number
+        function showName() {
+            const selectedRoll = rollSelect.value;
+            if (selectedRoll) {
+                nameDisplay.textContent = `Name: ${students[selectedRoll]}`;
+            } else {
+                nameDisplay.textContent = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

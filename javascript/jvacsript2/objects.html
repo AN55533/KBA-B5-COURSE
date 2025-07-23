@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript object and functions</title>
+</head>
+<body>
+    <p>Open your browser console to log outpy</p>
+    <script>
+        // object in js
+        let person={
+            name:"Anu",
+            age:"30",
+            city:"tvm",
+            //  here greet function is anonymus function  because no name inside the function
+            greet:function(){ 
+                console.log('Hello,'+this.name);
+            }
+        }
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city);
+        person.greet();
+
+    </script>
+</body>
+</html>

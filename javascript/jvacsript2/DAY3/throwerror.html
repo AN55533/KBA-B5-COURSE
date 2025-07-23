@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throwerror</title>
+</head>
+<body>
+    <script>
+        function checkAge(age){
+            if(age<18){
+                throw new error ("you must be 18 years or older!");
+
+            }else{
+                console.log("You are allowed !");
+            }
+
+        }
+        try{
+            checkAge(16)
+        }catch{
+            console.log("Error is:"+error.message);
+        }
+        finally{
+            console.log("This will always exicutes");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

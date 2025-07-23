@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping cart</title>
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+     <div id="Totalcost"> </div>
+    <div id="cartsize"> </div>
+    <button onclick="shoppingCartExample()"> Total Price </button>
+
+    <script>
+        function shoppingCartExample() {
+            const shoppingCart = new Map();
+            shoppingCart.set('Apple', 2);
+            shoppingCart.set('Orange', 5);
+            shoppingCart.set('Banana', 1);
+            const prices = {
+                "Apple": 80,
+                "Orange": 58,
+                "Banana": 70
+            }
+             let totalcost=0;
+
+            shoppingCart.forEach((quantity,item)=>{
+                totalcost+=prices[item]*quantity;     
+            });
+            document.getElementById('Totalcost').innerHTML="Total cost is " + totalcost;
+            document.getElementById('cartsize').innerHTML = "Number of items " + shoppingCart.size;
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+    JS program to read array a=[20,25,30,35,40,45] and divide the array in to two seperate arrays having equal number of
+    elements.
+    </p>
+
+
+    <script>
+        let a=[20,25,30,35,40,45];
+        let mid=a.length/2;
+        let firsthalf=a.slice(0,mid);
+        let secondhalf = a.slice( mid);
+        document.write("Orginal array [" + a+"]");
+        document.write("<br>first half array ["+ firsthalf +" ]", );
+        document.write("<br> second half array [" + secondhalf + " ]",);
+       
+    </script>
+
+
+
+</body>
+
+</html>

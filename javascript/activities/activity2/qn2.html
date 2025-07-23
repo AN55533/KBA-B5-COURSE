@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2.Make an unordered list of cinemas on html page using javascript.</p>
+    
+    <p id="movielist"></p>
+    <script>
+        const movie = document.createElement("m");
+            movie.textContent = "Movie List";
+            const movielt = document.getElementById("movielist");
+            movielt.appendChild(movie);
+            const lelement = document.createElement("ul");
+            const l1 = document.createElement("li");
+            l1.textContent = "Thudarum";
+            lelement.appendChild(l1);
+            const l2 = document.createElement("li");
+            l2.textContent = "Empuram";
+            lelement.appendChild(l2);
+            const l3 = document.createElement("li");
+            l3.textContent = "neru";
+            lelement.appendChild(l3);
+            const l4 = document.createElement("li");
+            l4.textContent = "Mandakini";
+            lelement.appendChild(l4);
+            movielt.appendChild(lelement)
+    </script>
+    
+</body>
+</html>

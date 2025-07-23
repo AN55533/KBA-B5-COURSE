@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order functions</title>
+</head>
+<body>
+    <H1>Higher order functions(This is arrays map)</H1>
+    <script>
+        let numbers=[1,2,3,4,5];
+        let doubled=numbers.map(n=>n*2)// where n is the each array element
+        // let doubled = numbers.map(n => n * 2)
+        console.log("doubled");
+        const squares=numbers.map(function(num){
+            return num*num;
+        })
+        console.log(squares);
+
+        //filter function is used to store the even numbers
+        let even=numbers.filter(n=>n%2===0);
+        console.log("even numbers are", even);
+        let sum=numbers.reduce((total,n)=> total+n,0)         // reduce function is used to find sum  total is the accumulator n is the array iterator 
+         console.log("Sum is",sum);
+
+         //initialize the array in 0 
+         //here fill function is used to initialize the value
+         let array=new Array(5).fill(0);
+         console.log("Initialized Array is", array);
+         for(i=0;i<array.length;i++){
+            array[i]=i+1;
+         }
+       console.log("Filled Array is", array);
+    </script>
+    
+</body>
+</html>

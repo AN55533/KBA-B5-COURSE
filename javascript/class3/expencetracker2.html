@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monthly Expense Tracker</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, select, button { margin: 5px; padding: 5px; }
+    .expense-group { margin-bottom: 10px; }
+    #details { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Monthly Expense Tracker</h2>
+
+  <div class="expense-group">
+    <label for="month">Month:</label>
+    <select id="month">
+      <option value="">--Select Month--</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+  </div>
+
+  <div class="expense-group">
+    <label>Hospital Fee: ₹</label>
+    <input type="number" id="hospital" placeholder="Enter amount" />
+  </div>
+
+  <div class="expense-group">
+    <label>School Fee: ₹</label>
+    <input type="number" id="school" placeholder="Enter amount" />
+  </div>
+
+  <div class="expense-group">
+    <label>Rent Fee: ₹</label>
+    <input type="number" id="rent" placeholder="Enter amount" />
+  </div>
+
+  <button onclick="addExpense()">Add Expense</button>
+
+  <hr>
+
+  <h3>Show Expense Details</h3>
+  <select id="viewMonth" onchange="showExpense()">
+    <option value="">--Select Month--</option>
+  </select>
+
+  <div id="details"></div>
+
+  <script>
+    const expenses = [];
+
+    function addExpense() {
+      const month = document.getElementById("month").value;
+      const hospital = parseFloat(document.getElementById("hospital").value) || 0;
+      const school = parseFloat(document.getElementById("school").value) || 0;
+      const rent = parseFloat(document.getElementById("rent").value) || 0;
+
+      if (!month) {
+        alert("Please select a month.");
+        return;
+      }
+
+      expenses[month] = {
+        hospital,
+        school,
+        rent,
+        total: hospital + school + rent
+      };
+
+      // Add month to the viewMonth dropdown if not already added
+      const viewMonth = document.getElementById("viewMonth");
+      if (![...viewMonth.options].some(option => option.value === month)) {
+        const option = document.createElement("option");
+        option.value = month;
+        option.textContent = month;
+        viewMonth.appendChild(option);
+      }
+
+      alert(`Expenses for ${month} added successfully!`);
+
+      // Clear input fields
+      document.getElementById("hospital").value = "";
+      document.getElementById("school").value = "";
+      document.getElementById("rent").value = "";
+    }
+
+    function showExpense() {
+      const selectedMonth = document.getElementById("viewMonth").value;
+      const detailsDiv = document.getElementById("details");
+
+      if (!expenses[selectedMonth]) {
+        detailsDiv.innerHTML = "No expenses found for this month.";
+        return;
+      }
+
+      const { hospital, school, rent, total } = expenses[selectedMonth];
+      detailsDiv.innerHTML = `
+        <p><strong>Month:</strong> ${selectedMonth}</p>
+        <p>Hospital Fee: ₹${hospital}</p>
+        <p>School Fee: ₹${school}</p>
+        <p>Rent Fee: ₹${rent}</p>
+        <p><strong>Total Expense: ₹${total}</strong></p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

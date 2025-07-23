@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>14.Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified
+    sign.</p>
+    <script>
+        
+               let a = -5;
+                let b = 2;
+                let c = 3;
+
+                let product = a * b * c;
+                let sign;
+
+                if (product > 0) {
+                    sign = "+";
+                } else if (product < 0) {
+                    sign = "-";
+                } else {
+                    sign = "0";
+                }
+
+                document.write("The sign of the product is: " + sign);
+    </script>
+    
+</body>
+</html>

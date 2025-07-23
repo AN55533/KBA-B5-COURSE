@@ -28,7 +28,11 @@ function handleOption(option) {
                     rl.question(`Enter Amount:`, (amount) => {
                         if (expence.trim() !== '' & description.trim() !== '' & amount.trim() !== '') {
                     const expenceId = expenceMap.size + 1;
-                            expenceMap.set(expenceId, expence.trim(), description.trim(), amount.trim());
+                            expenceMap.set(expenceId, {
+                                name: expence.trim(),
+                                description: description.trim(),
+                                amount: parseFloat(amount),
+                            });
                     console.log(`Expence added: [${expenceId}] :${expence}:  ${description} :${amount}`);
                 } else {
                     console.log('Please specify a valid Expence data.');
@@ -41,8 +45,8 @@ function handleOption(option) {
         case '2':
             if (expenceMap.size > 0) {
                 console.log(`Expences:`);
-                for (const [id, expence, description, amount] of expenceMap.entries()) {
-                    console.log(`[ ${id}] ${expence} ${description}${amount} `);
+                for (const [id, expence] of expenceMap.entries()) {
+                    console.log(`[ ${id}]  ${expence.description}${expence.amount} `);
                 }
             } else {
                 console.log('No Expence available.');

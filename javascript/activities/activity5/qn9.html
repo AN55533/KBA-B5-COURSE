@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+JS program to read an array and sort in ascending and descending order
+    </p>
+    <script>
+        let a=[1,2,3,4,5,6,7,8,9,10];
+         let ascending = a.slice(); 
+            for (let i = 0; i < ascending.length - 1; i++) {
+                for (let j = 0; j < ascending.length - i - 1; j++) {
+                    if (ascending[j] > ascending[j + 1]) {
+                        let temp = ascending[j];
+                        ascending[j] = ascending[j + 1];
+                        ascending[j + 1] = temp;
+                    }
+                }
+            }
+            let descending = arr.slice(); 
+            for (let i = 0; i < descending.length - 1; i++) {
+                for (let j = 0; j < descending.length - i - 1; j++) {
+                    if (descending[j] < descending[j + 1]) {
+                        let temp = descending[j];
+                        descending[j] = descending[j + 1];
+                        descending[j + 1] = temp;
+                    }
+                }
+            }
+      document.write("Original Array: [" + arr.join(", ") + "]<br>");
+        document.write("Ascending Order: [" + ascending.join(", ") + "]<br>");
+        document.write("Descending Order: [" + descending.join(", ") + "]<br>");
+    </script>
+    
+</body>
+</html>

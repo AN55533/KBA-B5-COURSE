@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let k = 153, s = 0, temp;
+        temp = k
+        while (temp > 0) {
+            let am = temp % 10;
+            // document.write("Last number: ",am)
+            s = s + (am * am * am)
+            temp = Math.floor(temp / 10)
+            document.write("Remaining: ", temp)
+        }
+        if (s == k) {
+            document.writeln("<br> The number is amstrong")
+        }
+        else {
+            document.writeln("<br> The number is not amstrong")
+        }
+    </script>
+
+</body>
+
+</html>

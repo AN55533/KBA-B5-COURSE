@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>8.Program to find simple interest & compound interest</p>
+    <script>
+        let principal=1000;
+        let rate=5;
+        let time=2;
+
+        let si=(principal * rate * time) / 100;
+        document.write("<br>principal =",principal);
+        document.write("<br>rate =", rate);
+        document.write("<br>time =", time);
+        document.write("<br>Simple interest=", si)
+
+       
+     let ci = principal * Math.pow((1 + rate / 100), time) - principal;
+
+       document.write("<br>Compound interest=", ci)
+
+
+    </script>
+    
+</body>
+</html>
